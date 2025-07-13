@@ -1,0 +1,56 @@
+name: iaymara
+description: Un tutor inteligente en Aymara.
+publish_to: none               # Evita publicar en pub.dev
+
+# Versión de la app
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.8.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # UI
+  cupertino_icons: ^1.0.8
+
+  # IA Gemma
+  flutter_gemma: ^0.9.0
+
+  # Seleccionar archivo del modelo
+  file_picker: ^10.2.0
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  build_runner: ^2.4.8
+  hive_generator: ^2.0.1
+  # Guardar ruta del modelo y otras preferencias
+  shared_preferences: ^2.2.2
+  image_picker: ^1.1.2
+  path_provider: ^2.1.5
+  permission_handler: ^12.0.1
+  speech_to_text: ^7.1.0
+  uuid: ^4.5.1
+  flutter_launcher_icons: ^0.13.1
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+
+  # Fuente de iconos Material
+  uses-material-design: true
+
+  # Imágenes y otros recursos
+  assets:
+    - assets/images/icono.png
+    - assets/images/IAYMARA.ico
+    # Si quisieras empaquetar un modelo por defecto, descomenta:
+    # - assets/gemma-3n-e2b-it-q4_k_m.bin
+flutter_icons:
+  android: true           # genera mipmaps para Android
+  ios: true               # genera AppIcon.appiconset para iOS
+  image_path: "assets/images/icono.png"
+  adaptive_icon_background: "#FFFFFF"   # Android 8.0+ (color o asset)
+  adaptive_icon_foreground: "assets/images/icono.png"
